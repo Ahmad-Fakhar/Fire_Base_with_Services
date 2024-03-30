@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    private Button BT;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -19,10 +20,20 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button BT = findViewById(R.id.services);
 
         // initialising all views through id defined above
         TextView forgetfulness = findViewById(R.id.text);
         forgetfulness.setText(
                 "(Firebase Authentication)");
+        // Set on Click Listener on Sign In button
+        BT.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                // Forward to LoginActivity
+                Intent intent=new Intent(MainActivity.this,Services.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -22,7 +22,6 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button Btn;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
-
     private Button Btn2;
 
     @Override
